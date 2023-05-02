@@ -1,0 +1,12 @@
+npm install axios 
+npm init -y 
+npm audit 
+npm audit fix
+npm install nodemon 
+npm install -g nodemon 
+in package.json, try and add 
+"scripts": {
+    "start": "node request.js",
+    "dev" : "nodemon request.js", 
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
