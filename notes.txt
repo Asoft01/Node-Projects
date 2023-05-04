@@ -10,3 +10,7 @@ in package.json, try and add
     "dev" : "nodemon request.js", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+
+uncommit git 
+git reset --hard 
+git clean -fxd

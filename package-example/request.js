@@ -9,4 +9,4 @@ axios.get('https://www.wikipedia.com')
 })
 .then(() => {
     console.log('All done')
-})
+}); 
