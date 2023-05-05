@@ -14,3 +14,5 @@ in package.json, try and add
 uncommit git 
 git reset --hard 
 git clean -fxd
+
+https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=cumulative
