@@ -9,7 +9,8 @@ const server = http.createServer((req, res) => {
     });
     // res.end('Hello! Sir Isaac Newton is your friend!');
     res.end(JSON.stringify({
-        'name' : 'Sir Isaac Newton'
+        id : 1,
+        name : 'Sir Isaac Newton'
     }));
 });
 
