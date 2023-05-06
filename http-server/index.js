@@ -1,8 +1,26 @@
 const http = require('http'); 
 
 const PORT = 3000;
+const server = http.createServer();
+const friends = [
+    {
+        id : 0, 
+        name : 'Nickola Tesla'
+    }, 
+    {
+        id: 1,
+        name : 'Sir Isaac Newton'
+    }, 
+    {
+        id: 2, 
+        name : 'Albert Einsten'
+    }
+];
 
-const server = http.createServer((req, res) => {
+// const server = http.createServer((req, res) => {
+server.on('request', (req, res) => {
+    const items = req.url.split('/');
+    // /friends/2  => ['', 'friends', '2']
     if(req.url === '/friends' ){
         // res.writeHead(200, {
         //     // 'Content-Type' : 'text/plain', 
@@ -29,6 +47,7 @@ const server = http.createServer((req, res) => {
     }else {
         res.statusCode = 404;
         res.end();
+        
     }
 });
 
