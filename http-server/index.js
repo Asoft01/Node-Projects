@@ -82,9 +82,10 @@ server.on('request', (req, res) => {
 //     body: JSON.stringify({ id: 3, name: 'Ryan Dahl'})
 // });
 ///////////////////////////////////////////////////////////
+// Copy this to the browser and see the result after you have served the project in the browser
 // fetch('http://localhost:3000/friends', {
 //     method: 'POST', 
-//     body: JSON.stringify({ id: 3, name: 'Ryan Dahl'})
+//     body: JSON.stringify({ id: 3, name: 'Ibraheem Olagoke'})
 // })
 // .then((response) => response.json())
 // .then((friend) => console.log(friend));
