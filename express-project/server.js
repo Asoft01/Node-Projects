@@ -34,6 +34,15 @@ const friends = [
     }
 ]; 
 
+app.use((req, res, next) => {
+    const start = Date.now();
+    // console.log(`${req.method} ${req.url}`);
+    next();
+    // actions go here...
+    const delta = Date.now() - start;
+    console.log(`${req.method} ${req.url} ${delta}ms`);
+});
+
 app.get('/friends', (req, res) =>  {
     // res.send(friends);
     res.json(friends);
