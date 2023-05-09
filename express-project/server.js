@@ -30,7 +30,7 @@ const friends = [
     }, 
     {
         id : 1, 
-        name : 'Sir Isaac Newton'
+        name : 'Sir Isaac Newtoon'
     }
 ]; 
 
