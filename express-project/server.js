@@ -8,6 +8,10 @@ const messagesRouter = require('./routes/messages.router');
 
 const app = express(); 
 
+// Templating Engine 
+app.set('view engine', 'hbs');
+app.set('views', path.join(__dirname, 'views'));
+
 const PORT = 3000;
 
 /////////////////////////////////////////////////////////////////
