@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 
 const friendsRouter = require('./routes/friends.router');
 // const friendsController = require('./controllers/friends.controller');
@@ -48,7 +49,8 @@ app.use((req, res, next) => {
     console.log(`${req.method} ${req.baseUrl}${req.url} ${delta}ms`);
 });
 
-app.use('/site', express.static('public'));
+// app.use('/site', express.static('public'));
+app.use('/site', express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 
 // app.post('/friends', (req, res) => {
