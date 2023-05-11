@@ -104,10 +104,11 @@ const friendsRouter = express.Router();
 // app.get('/friends', friendsController.getFriends);
 // app.get('/friends/:friendId', friendsController.getFriend);
 
-friendsRouter.post('/friends', friendsController.postFriend);
-friendsRouter.get('/friends', friendsController.getFriends);
-friendsRouter.get('/friends/:friendId', friendsController.getFriend);
-app.use(friendsRouter);
+friendsRouter.post('/', friendsController.postFriend);
+friendsRouter.get('/', friendsController.getFriends);
+friendsRouter.get('/:friendId', friendsController.getFriend);
+// app.use(friendsRouter);
+app.use('friends', friendsRouter);
 
 app.post('/messages', messagesController.postMessage);
 app.get('/messages', messagesController.getMessages);
