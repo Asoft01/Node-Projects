@@ -1,9 +1,9 @@
 const express = require('express');
 
-const friendsRouter = require('./routes/friends.router.js');
+const friendsRouter = require('./routes/friends.router');
 // const friendsController = require('./controllers/friends.controller');
-const messagesController = require('./controllers/messages.controller');
-const messagesRouter = require('./routes/messages.router.js');
+// const messagesController = require('./controllers/messages.controller');
+const messagesRouter = require('./routes/messages.router');
 
 const app = express(); 
 
@@ -43,9 +43,9 @@ app.use((req, res, next) => {
     const start = Date.now();
     // console.log(`${req.method} ${req.url}`);
     next();
-    // actions go here...
+    // actions go here..
     const delta = Date.now() - start;
-    console.log(`${req.method} ${req.url} ${delta}ms`);
+    console.log(`${req.method} ${req.baseUrl}${req.url} ${delta}ms`);
 });
 
 app.use(express.json());
@@ -110,16 +110,17 @@ app.use(express.json());
 // friendsRouter.post('/', friendsController.postFriend);
 // friendsRouter.get('/', friendsController.getFriends);
 // friendsRouter.get('/:friendId', friendsController.getFriend);
+// mounting in different router
 // app.use(friendsRouter);
+// app.use('/friends', friendsRouter);
+
 // app.post('/messages', messagesController.postMessage);
 // app.get('/messages', messagesController.getMessages);
 
 
-app.use('friends', friendsRouter);
-app.use('messages', messagesRouter);
+app.use('/friends', friendsRouter);
+app.use('/messages', messagesRouter);
 
-app.post('/messages', messagesController.postMessage);
-app.get('/messages', messagesController.getMessages);
 
 
 app.listen(PORT, () => {
