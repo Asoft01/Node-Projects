@@ -100,10 +100,15 @@ app.use(express.json());
 
 const friendsRouter = express.Router();
 
-app.post('/friends', friendsController.postFriend);
+// app.post('/friends', friendsController.postFriend);
+// app.get('/friends', friendsController.getFriends);
+// app.get('/friends/:friendId', friendsController.getFriend);
 
-app.get('/friends', friendsController.getFriends);
-app.get('/friends/:friendId', friendsController.getFriend);
+friendsRouter.post('/friends', friendsController.postFriend);
+friendsRouter.get('/friends', friendsController.getFriends);
+friendsRouter.get('/friends/:friendId', friendsController.getFriend);
+app.use(friendsRouter);
+
 app.post('/messages', messagesController.postMessage);
 app.get('/messages', messagesController.getMessages);
 
