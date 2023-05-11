@@ -1,7 +1,9 @@
 const express = require('express');
 
-const friendsController = require('./controllers/friends.controller');
+const friendsRouter = require('./routes/friends.router.js');
+// const friendsController = require('./controllers/friends.controller');
 const messagesController = require('./controllers/messages.controller');
+const messagesRouter = require('./routes/messages.router.js');
 
 const app = express(); 
 
@@ -98,17 +100,23 @@ app.use(express.json());
 //     console.log('Updating Messages...');
 // }) 
 
-const friendsRouter = express.Router();
 
 // app.post('/friends', friendsController.postFriend);
 // app.get('/friends', friendsController.getFriends);
 // app.get('/friends/:friendId', friendsController.getFriend);
 
-friendsRouter.post('/', friendsController.postFriend);
-friendsRouter.get('/', friendsController.getFriends);
-friendsRouter.get('/:friendId', friendsController.getFriend);
+
+// const friendsRouter = express.Router();
+// friendsRouter.post('/', friendsController.postFriend);
+// friendsRouter.get('/', friendsController.getFriends);
+// friendsRouter.get('/:friendId', friendsController.getFriend);
 // app.use(friendsRouter);
+// app.post('/messages', messagesController.postMessage);
+// app.get('/messages', messagesController.getMessages);
+
+
 app.use('friends', friendsRouter);
+app.use('messages', messagesRouter);
 
 app.post('/messages', messagesController.postMessage);
 app.get('/messages', messagesController.getMessages);
