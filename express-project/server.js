@@ -48,6 +48,7 @@ app.use((req, res, next) => {
     console.log(`${req.method} ${req.baseUrl}${req.url} ${delta}ms`);
 });
 
+app.use('/site', express.static('public'));
 app.use(express.json());
 
 // app.post('/friends', (req, res) => {
