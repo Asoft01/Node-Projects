@@ -124,7 +124,12 @@ app.use(express.json());
 // app.post('/messages', messagesController.postMessage);
 // app.get('/messages', messagesController.getMessages);
 
-
+app.get('/', (req, res) => {
+    res.render('index', {
+        title: 'My Friends Are Very Clever', 
+        caption : 'Let\'s go skiing!'
+    });
+});
 app.use('/friends', friendsRouter);
 app.use('/messages', messagesRouter);
 
