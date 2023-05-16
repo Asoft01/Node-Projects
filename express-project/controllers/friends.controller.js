@@ -34,7 +34,6 @@ function getFriend(req, res) {
     }
 }
 
-
 module.exports = {
     postFriend, 
     getFriends, 
