@@ -1,10 +1,10 @@
 const http = require('http'); 
 
-const express = require('express'); 
+// const express = require('express'); 
 
 // const app = express(); 
 
-// const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8000;
 
 const app = require('./app');
 

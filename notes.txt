@@ -19,3 +19,5 @@ https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbl
 
 npm run watch
 npm install hbs --save
+
+npm install --save-dev nodemon 
