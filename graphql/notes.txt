@@ -1,0 +1,2 @@
+npm in express express-graphql graphql
+npm in --save-dev nodemon
