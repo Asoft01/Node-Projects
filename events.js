@@ -23,7 +23,7 @@ celebrity.on('race', (result)=> {
   }
 });
 
-celebrity.on('race win', (result) => {
+celebrity.on('race', (result) => {
   if(result === 'win'){
     console.log('You could do better than that!');
   }

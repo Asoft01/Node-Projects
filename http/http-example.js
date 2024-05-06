@@ -11,7 +11,6 @@
 
 // req.end();
 
-
 const { get } = require('https'); 
  get('https://www.google.com', (res) => {
     res.on('data', (chunk) => {
@@ -22,4 +21,3 @@ const { get } = require('https');
         console.log('No more data');
     });
 });
-
