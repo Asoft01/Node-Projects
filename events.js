@@ -16,6 +16,7 @@ const celebrity = new EventEmitter();
 // celebrity.emit('race lost');
 // celebrity.emit('race win');
 
+
 celebrity.on('race', (result)=> {
   if(result === 'win'){
     console.log('Congratulations! You are the best');
