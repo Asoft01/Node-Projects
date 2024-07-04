@@ -11,7 +11,7 @@
 
 // req.end();
 
-const { get } = require('https'); 
+const { get } = require('https');
  get('https://www.google.com', (res) => {
     res.on('data', (chunk) => {
         console.log(`Data chunk: ${chunk}`);

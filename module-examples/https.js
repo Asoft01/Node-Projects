@@ -6,6 +6,10 @@
 //     return response.read();
 // }
 
+// makeRequest('https://google.com', 'hello');
+// const responseDatas = makeRequest('https://www.google.com', 'hello'); 
+// console.log(responseDatas);
+
 ////////////////////////////////////////////////////////////////////////////////////
 
 // const { send } = require('./internals/request'); 
