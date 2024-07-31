@@ -1,0 +1,2 @@
+yarn add apollo-server graphql
+node src/index.js
